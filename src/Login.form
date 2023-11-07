@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Login">
+  <grid id="27dc6" binding="log" layout-manager="GridLayoutManager" row-count="3" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="765" height="271"/>
+    </constraints>
+    <properties>
+      <background color="-394241"/>
+      <foreground color="-394241"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="fd834" class="javax.swing.JTextField" binding="name">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Tahoma" size="22" style="0"/>
+        </properties>
+      </component>
+      <component id="ef35c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14108606"/>
+          <font name="Nirmala UI" size="24"/>
+          <foreground color="-14108606"/>
+          <text value="Email"/>
+        </properties>
+      </component>
+      <component id="2b140" class="javax.swing.JButton" binding="loginButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-394241"/>
+          <font name="Segoe Script" size="22" style="1"/>
+          <foreground color="-14108606"/>
+          <text value="Login"/>
+        </properties>
+      </component>
+      <component id="acf2e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14108606"/>
+          <font name="Nirmala UI" size="24"/>
+          <foreground color="-14108606"/>
+          <text value="Password"/>
+        </properties>
+      </component>
+      <component id="1000b" class="javax.swing.JButton" binding="cancelButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-394241"/>
+          <font name="Segoe Script" size="22" style="1"/>
+          <foreground color="-14108606"/>
+          <text value="Cancel"/>
+        </properties>
+      </component>
+      <component id="ba416" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/179b7717f2c1978b3982c7be94e1b457_resize.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="c7a24" class="javax.swing.JPasswordField" binding="password">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Tahoma" size="22" style="0"/>
+        </properties>
+      </component>
+      <hspacer id="4b345">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+    </children>
+  </grid>
+</form>

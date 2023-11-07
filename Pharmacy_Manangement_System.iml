@@ -7,5 +7,23 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Studend_Registration_System/mysql-connector-j-8.1.0.jar!/" />
+          <root url="file://$MODULE_DIR$/../Studend_Registration_System" />
+          <root url="file://$MODULE_DIR$/../Studend_Registration_System" />
+          <root url="jar://$MODULE_DIR$/../Studend_Registration_System/rs2xml.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../Studend_Registration_System" />
+          <root url="file://$MODULE_DIR$/../Studend_Registration_System/src" />
+          <root url="jar://$MODULE_DIR$/../Studend_Registration_System/rs2xml.jar!/src" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../Studend_Registration_System" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../Studend_Registration_System" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
