@@ -69,7 +69,7 @@ public class Patient {
             public void actionPerformed(ActionEvent e) {
                 try {
                     statement = connection.createStatement();
-                    String sql = "SELECT * FROM pation WHERE p_name LIKE '" + Name.getText() + "'";
+                    String sql = "SELECT * FROM pation WHERE p_name = '" + Name.getText() + "'";
                     ResultSet RS = statement.executeQuery(sql);
 
                     table.setModel(DbUtils.resultSetToTableModel(RS));

@@ -63,5 +63,12 @@ public class Home {
                 new Patient();
             }
         });
+        manageBillsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new Bills();
+            }
+        });
     }
 }

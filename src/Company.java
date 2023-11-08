@@ -26,6 +26,9 @@ public class Company {
     private JTextField address;
     private JTextField email;
     private JTextField phone;
+    private JTextField Name;
+    private JButton search;
+    private JButton sh;
     Connection connection = database_connection.connection();
     Statement statement = null;
 
@@ -150,6 +153,27 @@ public class Company {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 new Home();
+            }
+        });
+        sh.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ShowRecord();
+                Name.setText("");
+            }
+        });
+        search.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    statement = connection.createStatement();
+                    String sql = "SELECT * FROM  company WHERE comp_name = '"+ Name.getText()+"'";
+                    ResultSet rs = statement.executeQuery(sql);
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+                }catch (Exception E){
+                    JOptionPane.showMessageDialog(null,E);
+                }
+
             }
         });
     }

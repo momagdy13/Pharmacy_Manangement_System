@@ -45,14 +45,10 @@ public class Employee {
             public void actionPerformed(ActionEvent e) {
                 try {
                     statement = connection.createStatement();
-                    String sql = "SELECT * FROM employee WHERE emp_name LIKE '"+ Name.getText()+"'";
+                    String sql = "SELECT * FROM employee WHERE emp_name = '"+ Name.getText()+"'";
                     ResultSet rs = statement.executeQuery(sql);
-                    if (rs.next()){
                         table.setModel(DbUtils.resultSetToTableModel(rs));
-                    }else {
-                        JOptionPane.showMessageDialog(null,"Employee  Not Found..! ");
-                        Name.setText("");
-                    }
+
 
                 }catch (Exception E){
                     JOptionPane.showMessageDialog(null,E);

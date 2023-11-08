@@ -24,6 +24,9 @@ public class Medicine {
     private JScrollPane tab;
     private JButton homeButton;
     private JButton clear;
+    private JTextField searchh;
+    private JButton search;
+    private JButton sh;
     Connection connection = database_connection.connection();
     Statement statement = null;
 
@@ -163,6 +166,30 @@ public class Medicine {
                 prod_date.setText("");
                 phName.setSelectedItem(null);
                 combo.setSelectedItem(null);
+            }
+        });
+        sh.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ShowRecord();
+                searchh.setText("");
+            }
+        });
+        search.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    statement = connection.createStatement();
+                    String sql = "SELECT * FROM medecine WHERE mdcn_name ='"+ searchh.getText()+"'";
+                    ResultSet rs = statement.executeQuery(sql);
+
+                        table.setModel(DbUtils.resultSetToTableModel(rs));
+
+
+                }catch (Exception E){
+                    JOptionPane.showMessageDialog(null,E);
+                }
+
             }
         });
     }
