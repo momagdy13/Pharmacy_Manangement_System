@@ -79,6 +79,8 @@ public class Medicine {
                     qnt.setText(model.getValueAt(MyIndex, 2).toString());
                     exp_date.setText(model.getValueAt(MyIndex, 5).toString());
                     prod_date.setText(model.getValueAt(MyIndex, 6).toString());
+                    phName.setSelectedItem(model.getValueAt(MyIndex,3));
+                    combo.setSelectedItem(model.getValueAt(MyIndex,4));
 
 
                 } catch (Exception exception) {
@@ -159,8 +161,8 @@ public class Medicine {
                 qnt.setText("");
                 exp_date.setText("");
                 prod_date.setText("");
-                phName.setSelectedItem("Null");
-                combo.setSelectedItem("Null");
+                phName.setSelectedItem(null);
+                combo.setSelectedItem(null);
             }
         });
     }

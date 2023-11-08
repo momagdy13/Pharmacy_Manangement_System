@@ -141,6 +141,14 @@ public class Company {
                 email.setText("");
                 address.setText("");
                 phone.setText("");
+
+            }
+        });
+        homeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new Home();
             }
         });
     }

@@ -46,14 +46,14 @@ public class Login {
                     PreparedStatement ps;
                     Connection connection = database_connection.connection();
                     try {
-                        ps = connection.prepareStatement("SELECT * FROM login WHERE email = ? AND password = ?");
+                        ps = connection.prepareStatement("SELECT * FROM employee WHERE emp_email = ? AND password = ?");
                         ps.setString(1, name.getText());
                         ps.setString(2, password.getText());
                         ResultSet rs = ps.executeQuery();
                         if (rs.next()) {
                             frame.dispose();
                             JOptionPane.showMessageDialog(null,"Success!");
-//                            new Home();
+                            new Home();
 
                         } else {
                             JOptionPane.showMessageDialog(null, "Email or Password invalid", "MESSAGE", JOptionPane.ERROR_MESSAGE);

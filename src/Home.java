@@ -27,5 +27,19 @@ public class Home {
                 new Medicine();
             }
         });
+        companyButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new Company();
+            }
+        });
+        manageDoctorsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new Doctor();
+            }
+        });
     }
 }
