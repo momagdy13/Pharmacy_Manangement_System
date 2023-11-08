@@ -10,6 +10,7 @@ public class Home {
     private JPanel home;
     private JButton companyButton1;
     private JButton patientButton;
+    private JButton logOutButton;
 
     public Home() {
         JFrame frame = new JFrame("Home");
@@ -39,6 +40,20 @@ public class Home {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 new Doctor();
+            }
+        });
+        manageEmployeeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new Employee();
+            }
+        });
+        logOutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new Login();
             }
         });
     }

@@ -70,10 +70,16 @@ public class Company {
                     String Phone = phone.getText();
                     String Address = address.getText();
                     String sql = "INSERT INTO company (comp_name ,comp_email,comp_address,comp_phone) VALUES ('" + Name + "','" + Email + "','" + Address + "','" + Phone + "')";
-                    statement.executeUpdate(sql);
-                    JOptionPane.showMessageDialog(null, "Insert Data Successfully!");
-                    frame.dispose();
-                    new Company();
+                    if (Name.isEmpty() || Address.isEmpty() || Phone.isEmpty() || Email.isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Fill Out All Items...!", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    } else {
+                        statement.executeUpdate(sql);
+                        JOptionPane.showMessageDialog(null, "Insert Data Successfully!");
+                        frame.dispose();
+                        new Company();
+
+                    }
+
 
 
                 } catch (Exception exception) {
@@ -114,22 +120,17 @@ public class Company {
                 try {
                     statement = connection.createStatement();
                     String Name = name.getText();
-                    String Email = email.getText();
-                    String Phone = phone.getText();
-                    String Address = address.getText();
                     String sql = "DELETE FROM company WHERE comp_name ='" + Name + "'    ";
-                    if (Name.isEmpty() || Address.isEmpty() || Phone.isEmpty() || Email.isEmpty()) {
-                        JOptionPane.showMessageDialog(null, "Fill Out All Items...!", "ERROR", JOptionPane.ERROR_MESSAGE);
-                    } else {
+
                         statement.executeUpdate(sql);
                         JOptionPane.showMessageDialog(null, "Delete Data Successfully!");
                         frame.dispose();
                         new Company();
-                    }
+
 
 
                 } catch (Exception exception) {
-                    JOptionPane.showMessageDialog(null, exception);
+                    JOptionPane.showMessageDialog(null, "U Use  Company Name With Medicine...! U Can't Delete","ERROR",JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

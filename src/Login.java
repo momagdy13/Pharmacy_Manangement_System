@@ -46,13 +46,12 @@ public class Login {
                     PreparedStatement ps;
                     Connection connection = database_connection.connection();
                     try {
-                        ps = connection.prepareStatement("SELECT * FROM employee WHERE emp_email = ? AND password = ?");
+                        ps = connection.prepareStatement("SELECT * FROM admin WHERE email = ? AND password = ?");
                         ps.setString(1, name.getText());
                         ps.setString(2, password.getText());
                         ResultSet rs = ps.executeQuery();
                         if (rs.next()) {
                             frame.dispose();
-                            JOptionPane.showMessageDialog(null,"Success!");
                             new Home();
 
                         } else {
@@ -66,6 +65,12 @@ public class Login {
 
 
                 }
+            }
+        });
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
     }
