@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Pharmacy_Manangement_System:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pharmacy_Manangement_System_jar</output-path>
+    <root id="archive" name="Pharmacy_Manangement_System.jar">
+      <element id="module-output" name="Pharmacy_Manangement_System" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Studend_Registration_System/mysql-connector-j-8.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Studend_Registration_System/rs2xml.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
