@@ -263,6 +263,24 @@
           <text value="Salary"/>
         </properties>
       </component>
+      <component id="48b20" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Tahoma" size="20"/>
+          <foreground color="-14108606"/>
+          <text value="PH_Branch"/>
+        </properties>
+      </component>
+      <component id="857a7" class="javax.swing.JComboBox" binding="ph">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Tahoma" size="18" style="0"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

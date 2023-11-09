@@ -26,6 +26,7 @@ public class Employee {
     private JTextField email;
     private JButton delete;
     private JButton clear;
+    private JComboBox ph;
     Connection connection = database_connection.connection();
     Statement statement = null;
 
@@ -39,6 +40,7 @@ public class Employee {
         frame.setSize(1000,700);
         frame.setLocationRelativeTo(null);
         ShowRecord();
+        AddItem();
 
         search.addActionListener(new ActionListener() {
             @Override
@@ -71,7 +73,7 @@ public class Employee {
                     String Email = email.getText();
                     String Phone = phone.getText();
                     String Salary = salary.getText();
-                    String sql = "INSERT INTO employee (emp_name,emp_phone,emp_email,emp_salary) VALUES ('"+Name+"','"+Phone+"','"+Email+"','"+Salary+"') ";
+                    String sql = "INSERT INTO employee (emp_name,emp_phone,emp_email,emp_salary,ph_branch) VALUES ('"+Name+"','"+Phone+"','"+Email+"','"+Salary+"','"+ph.getSelectedItem()+"') ";
                     if (Name.isEmpty()||Email.isEmpty()||Phone.isEmpty()||Salary.isEmpty()) {
                         JOptionPane.showMessageDialog(null,"Fill Out All Items..!","ERROR",JOptionPane.ERROR_MESSAGE);
                     }else {
@@ -94,7 +96,7 @@ public class Employee {
                     String Email = email.getText();
                     String Phone = phone.getText();
                     String Salary = salary.getText();
-                    String sql = "UPDATE employee SET emp_name='"+Name+"' ,emp_phone ='"+Phone+"' ,emp_email = '"+Email+"',emp_salary = '"+Salary+"' WHERE emp_name= '"+name.getText()+"'  ";
+                    String sql = "UPDATE employee SET emp_name='"+Name+"' ,emp_phone ='"+Phone+"' ,emp_email = '"+Email+"',emp_salary = '"+Salary+"',ph_branch = '"+ph.getSelectedItem()+"' WHERE emp_name= '"+name.getText()+"'  ";
                     if (Name.isEmpty()||Email.isEmpty()||Phone.isEmpty()||Salary.isEmpty()) {
                         JOptionPane.showMessageDialog(null,"Fill Out All Items..!","ERROR",JOptionPane.ERROR_MESSAGE);
                     }else {
@@ -123,6 +125,7 @@ public class Employee {
                     email.setText(model.getValueAt(MyIndex, 2).toString());
                     salary.setText(model.getValueAt(MyIndex, 3).toString());
                     phone.setText(model.getValueAt(MyIndex, 1).toString());
+                    ph.setSelectedItem(model.getValueAt(MyIndex,4));
 
 
 
@@ -161,6 +164,7 @@ public class Employee {
                 phone.setText("");
                 salary.setText("");
                 email.setText("");
+                ph.setSelectedItem(null);
             }
         });
     }
@@ -171,6 +175,18 @@ public class Employee {
             ResultSet rs = statement.executeQuery(sql);
 
             table.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null, exception);
+        }
+    }
+
+    public void AddItem() {
+        try {
+            statement = connection.createStatement();
+            String sql = "SELECT * FROM pharmacy";
+            ResultSet rs = statement.executeQuery(sql);
+            while (rs.next())
+                ph.addItem(rs.getString(1));
         } catch (Exception exception) {
             JOptionPane.showMessageDialog(null, exception);
         }

@@ -11,6 +11,7 @@ public class Home {
     private JButton companyButton1;
     private JButton patientButton;
     private JButton logOutButton;
+    private JButton ph_B;
 
     public Home() {
         JFrame frame = new JFrame("Home");
@@ -68,6 +69,13 @@ public class Home {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 new Bills();
+            }
+        });
+        ph_B.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                new Branch();
             }
         });
     }

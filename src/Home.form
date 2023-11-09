@@ -1,101 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Home">
-  <grid id="27dc6" binding="home" layout-manager="GridLayoutManager" row-count="8" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="home" layout-manager="GridLayoutManager" row-count="8" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="1" y="4" width="2336" height="826"/>
+      <xy x="4" y="5" width="1584" height="938"/>
     </constraints>
     <properties>
       <background color="-394241"/>
     </properties>
     <border type="none"/>
     <children>
-      <component id="edd" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="589" height="77"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Segoe Script" size="48" style="2"/>
-          <foreground color="-14108606"/>
-          <text value="Home"/>
-        </properties>
-      </component>
       <vspacer id="92b6c">
         <constraints>
-          <grid row="7" column="4" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <vspacer id="b4d93">
         <constraints>
-          <grid row="6" column="4" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <vspacer id="3e25e">
         <constraints>
-          <grid row="5" column="4" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <component id="a85c6" class="javax.swing.JButton" binding="companyButton1" default-binding="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-394241"/>
           <font name="Segoe Script" size="36" style="2"/>
           <foreground color="-14108606"/>
-          <text value="Company"/>
+          <text value="Manage_Company"/>
         </properties>
       </component>
       <component id="7ecdd" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="10" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="Icon/179b7717f2c1978b3982c7be94e1b457_resize.jpg"/>
           <text value=""/>
         </properties>
       </component>
-      <component id="ae927" class="javax.swing.JButton" binding="manageDoctorsButton" default-binding="true">
+      <component id="96ca3" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="5" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="663a4" class="javax.swing.JButton" binding="manageEmployeeButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-394241"/>
-          <font name="Segoe Print" size="22" style="1"/>
+          <font name="Segoe Print" size="36" style="1"/>
           <foreground color="-14108606"/>
-          <icon value="Icon/box-physicians.jpg"/>
-          <text value="Manage Doctors"/>
+          <text value="Manage Employee"/>
         </properties>
       </component>
-      <component id="5a711" class="javax.swing.JButton" binding="manageBillsButton" default-binding="true">
+      <component id="ae04d" class="javax.swing.JButton" binding="manageMedicineButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-394241"/>
+          <font name="Segoe Print" size="36" style="1"/>
+          <foreground color="-14108606"/>
+          <text value="Manage  Medicine"/>
+        </properties>
+      </component>
+      <component id="ae927" class="javax.swing.JButton" binding="manageDoctorsButton" default-binding="true">
         <constraints>
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-394241"/>
-          <font name="Segoe Print" size="24" style="2"/>
+          <font name="Segoe Print" size="36" style="1"/>
           <foreground color="-14108606"/>
-          <horizontalTextPosition value="4"/>
-          <icon value="Icon/maxresdefault.jpg"/>
-          <text value="Manage Bills"/>
+          <hideActionText value="true"/>
+          <text value="Manage Doctors"/>
         </properties>
       </component>
-      <component id="e1ab0" class="javax.swing.JButton" binding="patientButton" default-binding="true">
+      <component id="5a711" class="javax.swing.JButton" binding="manageBillsButton" default-binding="true">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-394241"/>
-          <font name="Segoe Script" size="36" style="2"/>
+          <font name="Segoe Print" size="36" style="1"/>
           <foreground color="-14108606"/>
-          <text value="Patient"/>
+          <horizontalTextPosition value="4"/>
+          <text value="Manage Bills"/>
         </properties>
       </component>
       <component id="5c8a5" class="javax.swing.JButton" binding="logOutButton" default-binding="true">
         <constraints>
-          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-394241"/>
@@ -107,28 +113,101 @@
           <text value="Log Out"/>
         </properties>
       </component>
-      <component id="ae04d" class="javax.swing.JButton" binding="manageMedicineButton" default-binding="true">
+      <component id="edd" class="javax.swing.JLabel">
         <constraints>
-          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="589" height="77"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-394241"/>
-          <font name="Segoe Print" size="22" style="2"/>
+          <font name="Segoe Script" size="48" style="2"/>
           <foreground color="-14108606"/>
-          <icon value="Icon/Examples-of-Dangerous-Drugs.jpg"/>
-          <text value="Manage  Medicine"/>
+          <text value="Home"/>
         </properties>
       </component>
-      <component id="663a4" class="javax.swing.JButton" binding="manageEmployeeButton" default-binding="true">
+      <component id="5a304" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/OIP (1).jpeg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="b8251" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/R.jpeg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="a182d" class="javax.swing.JButton" binding="ph_B">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-394241"/>
-          <font name="Segoe Print" size="22" style="1"/>
+          <font name="Segoe Script" size="36" style="2"/>
           <foreground color="-14108606"/>
-          <icon value="Icon/OIP.jpg"/>
-          <text value="Manage Employee"/>
+          <text value="Pharmacy_Branchs"/>
+        </properties>
+      </component>
+      <component id="6e882" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/OIP.jpeg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e1ab0" class="javax.swing.JButton" binding="patientButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-394241"/>
+          <font name="Segoe Script" size="36" style="2"/>
+          <foreground color="-14108606"/>
+          <text value="Manage_Patient"/>
+        </properties>
+      </component>
+      <component id="32a54" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/doctor.patient.hospital_G_493216537-860x573.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="532c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/uk-1517831545.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="f7d08" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/mgm.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2a449" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="Icon/pexels-photo-7231804.jpeg"/>
+          <text value=""/>
         </properties>
       </component>
     </children>
