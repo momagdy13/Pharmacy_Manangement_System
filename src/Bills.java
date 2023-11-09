@@ -28,6 +28,10 @@ public class Bills {
     private JButton search;
     private JButton sh;
     private JTextField searchh;
+    private JComboBox mdcn_p;
+    private JTextField mdcnQ;
+    private JComboBox mdcnPrice;
+    private JTextField mprice;
     Connection connection = database_connection.connection();
     Statement statement = null;
 
@@ -45,6 +49,7 @@ public class Bills {
         AddItem();
         AdItem();
 
+
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -54,7 +59,7 @@ public class Bills {
                     String MName = (String) mdcn.getSelectedItem();
                     String Cost = cost.getText();
                     String PN = (String) PNAME.getSelectedItem();
-                    String sql = "INSERT INTO bills (b_id,b_cost,mdcn_name,p_name,emp_name ) VALUES ('" + id.getText() + "','" + Cost + "','" + MName + "','" + PN + "','" + EName + "') ";
+                    String sql = "INSERT INTO bills (b_id,b_cost,mdcn_name,p_name,emp_name ,Mdcn_QN ) VALUES ('" + id.getText() + "','" + Cost + "','" + MName + "','" + PN + "','" + EName + "','"+mdcnQ.getText()+"') ";
                     if (Cost.isEmpty() || MName.isEmpty() || EName.isEmpty() || PN.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Fill Out All Items..!", "ERROR", JOptionPane.ERROR_MESSAGE);
                     } else {
@@ -78,7 +83,7 @@ public class Bills {
                     String MName = (String) mdcn.getSelectedItem();
                     String Cost = cost.getText();
                     String PN = PHNAME.getText();
-                    String sql = "UPDATE bills SET b_id = '" + id.getText() + "', b_cost = '" + Cost + "',mdcn_name ='" + MName + "',p_name = '" + PN + "',emp_name = '" + EName + "'";
+                    String sql = "UPDATE bills SET b_id = '" + id.getText() + "', b_cost = '" + Cost + "',mdcn_name ='" + MName + "',p_name = '" + PN + "',emp_name = '" + EName + "',Mdcn_QN = '"+mdcnQ+"'";
                     if (Cost.isEmpty() || MName.isEmpty() || EName.isEmpty() || PN.isEmpty()) {
                         JOptionPane.showMessageDialog(null, "Fill Out All Items..!", "ERROR", JOptionPane.ERROR_MESSAGE);
                     } else {
@@ -103,8 +108,8 @@ public class Bills {
                     id.setText(model.getValueAt(MyIndex, 0).toString());
                     mdcn.setSelectedItem(model.getValueAt(MyIndex, 2).toString());
                     cost.setText(model.getValueAt(MyIndex, 1).toString());
-                    PNAME.setSelectedItem(model.getValueAt(MyIndex,3));
-                    emp_name.setSelectedItem(model.getValueAt(MyIndex,4));
+                    PNAME.setSelectedItem(model.getValueAt(MyIndex, 3));
+                    emp_name.setSelectedItem(model.getValueAt(MyIndex, 4));
 
 
                 } catch (Exception exception) {
@@ -128,14 +133,14 @@ public class Bills {
             public void actionPerformed(ActionEvent e) {
                 try {
                     statement = connection.createStatement();
-                    String sql  = "DELETE FROM bills WHERE b_id = '"+id.getText()+"' ";
+                    String sql = "DELETE FROM bills WHERE b_id = '" + id.getText() + "' ";
                     statement.executeUpdate(sql);
-                    JOptionPane.showMessageDialog(null,"Delete Data Successfully..! ");
+                    JOptionPane.showMessageDialog(null, "Delete Data Successfully..! ");
                     frame.dispose();
                     new Bills();
 
-                }catch (Exception E){
-                    JOptionPane.showMessageDialog(null,E);
+                } catch (Exception E) {
+                    JOptionPane.showMessageDialog(null, E);
                 }
 
             }
@@ -160,11 +165,11 @@ public class Bills {
             public void actionPerformed(ActionEvent e) {
                 try {
                     statement = connection.createStatement();
-                    String sql = "SELECT * FROM bills WHERE b_id = '"+ searchh.getText()+"'";
+                    String sql = "SELECT * FROM bills WHERE b_id = '" + searchh.getText() + "'";
                     ResultSet rs = statement.executeQuery(sql);
                     table.setModel(DbUtils.resultSetToTableModel(rs));
-                }catch (Exception E){
-                    JOptionPane.showMessageDialog(null,E);
+                } catch (Exception E) {
+                    JOptionPane.showMessageDialog(null, E);
                 }
             }
 
@@ -179,21 +184,25 @@ public class Bills {
 
             table.setModel(DbUtils.resultSetToTableModel(rs));
         } catch (Exception exception) {
-            JOptionPane.showMessageDialog(null, exception,"ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, exception, "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     public void addItem() {
         try {
             statement = connection.createStatement();
-            String sql = "SELECT * FROM medecine";
+            String sql = "SELECT * FROM medecine ";
             ResultSet rs = statement.executeQuery(sql);
-            while (rs.next())
+            while (rs.next()){
                 mdcn.addItem(rs.getString(1));
+            }
+
         } catch (Exception exception) {
             JOptionPane.showMessageDialog(null, exception);
         }
     }
+
+
 
     public void AdItem() {
         try {

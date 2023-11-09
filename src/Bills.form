@@ -142,6 +142,8 @@
           </grid>
         </constraints>
         <properties>
+          <editable value="true"/>
+          <enabled value="true"/>
           <font name="Tahoma" size="20"/>
         </properties>
       </component>
@@ -268,6 +270,26 @@
           <font name="Segoe Print" size="20" style="2"/>
           <foreground color="-14108606"/>
           <text value="Search By ID"/>
+        </properties>
+      </component>
+      <component id="f267c" class="javax.swing.JTextField" binding="mdcnQ">
+        <constraints>
+          <grid row="1" column="5" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Tahoma" size="20"/>
+        </properties>
+      </component>
+      <component id="4e663" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Tahoma" size="20"/>
+          <foreground color="-14108606"/>
+          <text value="Mdcn_Qnt"/>
         </properties>
       </component>
     </children>
