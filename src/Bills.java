@@ -179,7 +179,7 @@ public class Bills {
 
             table.setModel(DbUtils.resultSetToTableModel(rs));
         } catch (Exception exception) {
-            JOptionPane.showMessageDialog(null, exception);
+            JOptionPane.showMessageDialog(null, exception,"ERROR",JOptionPane.ERROR_MESSAGE);
         }
     }
 
